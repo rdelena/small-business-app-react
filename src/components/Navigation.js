@@ -1,6 +1,5 @@
 import React from "react";
-import { AppBar, Toolbar, IconButton, Typography } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
+import { AppBar, Toolbar, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 
@@ -18,7 +17,7 @@ const Navigation = () => {
       <AppBar position="relative">
         <Toolbar>
           <Typography variant="h6" style={{ flexGrow: "1", color: "white" }}>
-            Small Business App
+            Austin Small Business
           </Typography>
           <ul className="nav-list">
             <li className="nav-list-item">

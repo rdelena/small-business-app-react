@@ -27,7 +27,7 @@ const Router = () => {
     <Routes>
       <Route path="/Login" element={<Login />} />
       <Route path="/Listings" element={<Listings />} />
-      <Route path="/Details" element={<Details />} />
+      <Route path="/Details/:id" element={<Details />} />
       <Route
         path="/AdminView"
         element={<ProtectedRoute component={AdminView} />}

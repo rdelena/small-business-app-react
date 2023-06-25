@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { TextField, Button, Container } from "@mui/material";
 import cookie from "cookie";
+import { WidthFull } from "@mui/icons-material";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -23,8 +24,6 @@ const Login = () => {
 
   const login = (e) => {
     e.preventDefault();
-    // set cookie here
-    // set loggedIn = true and max-age = 60*1000 (one minute)
     document.cookie = cookie.serialize("loggedIn", "true", {
       maxAge: 60,
     });
@@ -34,7 +33,7 @@ const Login = () => {
 
   return (
     <div className="App">
-      <Container maxWidth="sm">
+      <Container maxWidth="fullwidth">
         <form className="login-form" onSubmit={login}>
           <TextField
             required
@@ -43,6 +42,7 @@ const Login = () => {
             name="username"
             label="Username"
             type="text"
+            variant="standard"
           />
           <TextField
             required
@@ -51,12 +51,13 @@ const Login = () => {
             name="password"
             label="Password"
             type="password"
+            variant="standard"
           />
           <Button
             type="submit"
             className="login-button"
             variant="contained"
-            color="primary"
+            color="inherit"
           >
             Login
           </Button>
