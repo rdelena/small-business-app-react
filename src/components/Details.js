@@ -8,6 +8,9 @@ const Details = (props) => {
   const id = useParams().id;
   const list = listing.find((c) => c.id === Number(id));
 
+  // const id = props.match.params.id
+  // const list = props.listing.find(c => c.id == id)
+
   return (
     <Container maxWidth="sm" className="listing-container">
       <Paper className="listing-paper">

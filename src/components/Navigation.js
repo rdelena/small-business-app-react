@@ -22,7 +22,7 @@ const Navigation = () => {
           <ul className="nav-list">
             <li className="nav-list-item">
               <Link
-                to="/Listings"
+                to="/listings"
                 style={{ textDecoration: "none", color: "white" }}
               >
                 Listings
@@ -30,10 +30,26 @@ const Navigation = () => {
             </li>
             <li className="nav-list-item">
               <Link
-                to="/Login"
+                to="/login"
                 style={{ textDecoration: "none", color: "white" }}
               >
                 Login
+              </Link>
+            </li>
+            <li className="nav-list-item">
+              <Link
+                to="/newListing"
+                style={{ textDecoration: "none", color: "white" }}
+              >
+                Add
+              </Link>
+            </li>
+            <li className="nav-list-item">
+              <Link
+                to="/adminView"
+                style={{ textDecoration: "none", color: "white" }}
+              >
+                Edit Listings
               </Link>
             </li>
           </ul>

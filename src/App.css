@@ -67,6 +67,9 @@
 .listing-paper {
   padding: 25px;
 }
+.text-red {
+  color: red;
+}
 
 @keyframes App-logo-spin {
   from {

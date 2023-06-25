@@ -2,10 +2,10 @@ import React from "react";
 import { Routes, Route, Navigate } from "react-router";
 import cookie from "cookie";
 import Login from "./components/Login";
-import Listings from "./components/Listings";
-import Details from "./components/Details";
-import AdminView from "./components/AdminView";
-import NewListing from "./components/NewListing";
+import Listings from "./containers/Listings";
+import Details from "./containers/Details";
+import AdminView from "./containers/AdminView";
+import NewListing from "./containers/NewListing";
 
 const checkAuth = () => {
   const cookies = cookie.parse(document.cookie);
@@ -25,15 +25,15 @@ const ProtectedRoute = (props) => {
 const Router = () => {
   return (
     <Routes>
-      <Route path="/Login" element={<Login />} />
-      <Route path="/Listings" element={<Listings />} />
-      <Route path="/Details/:id" element={<Details />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/listings" element={<Listings />} />
+      <Route path="/details/:id" element={<Details />} />
       <Route
-        path="/AdminView"
+        path="/adminView"
         element={<ProtectedRoute component={AdminView} />}
       />
       <Route
-        path="/NewListing"
+        path="/newListing"
         element={<ProtectedRoute component={NewListing} />}
       />
     </Routes>

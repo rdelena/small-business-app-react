@@ -7,10 +7,10 @@ import {
   TableCell,
   Container,
 } from "@mui/material";
-import Listing from "../listing.json";
 import { Link } from "react-router-dom";
+import DeleteIcon from "@mui/icons-material/Delete";
 
-const Listings = () => {
+const adminView = (props) => {
   return (
     <div>
       <Container>
@@ -24,17 +24,22 @@ const Listings = () => {
               <TableCell>Delete</TableCell>
             </TableRow>
           </TableHead>
-          {Listing.map((list, idx) => (
+          {props.listing.map((list, idx) => (
             <TableBody key={idx}>
               <TableCell>
-                <Link style={{ color: "black" }} to={`/Details/${list.id}`}>
+                <Link style={{ color: "black" }} to={`/details/${list.id}`}>
                   {list["Name"]}{" "}
                 </Link>
               </TableCell>
               <TableCell>{list["Description"]}</TableCell>
               <TableCell>{list["Hours"]}</TableCell>
               <TableCell>{list["Address"]}</TableCell>
-              <TableCell>Delete</TableCell>
+              <TableCell>
+                <DeleteIcon
+                  onClick={() => props.removeListing(idx)}
+                  className="icon text-red"
+                />
+              </TableCell>
             </TableBody>
           ))}
         </Table>
@@ -43,4 +48,4 @@ const Listings = () => {
   );
 };
 
-export default Listings;
+export default adminView;

@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import NewListing from "../components/NewListing";
+import AddListing from "../components/AddListing";
 import { addListing } from "../redux/action";
 
 const mapDispatchToProps = (dispatch) => {
@@ -8,4 +8,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(null, mapDispatchToProps)(NewListing);
+export default connect(null, mapDispatchToProps)(AddListing);

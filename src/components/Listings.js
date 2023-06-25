@@ -7,10 +7,9 @@ import {
   TableCell,
   Container,
 } from "@mui/material";
-import Listing from "../listing.json";
 import { Link } from "react-router-dom";
 
-const Listings = () => {
+const Listings = (props) => {
   return (
     <div>
       <Container>
@@ -23,10 +22,10 @@ const Listings = () => {
               <TableCell>Address</TableCell>
             </TableRow>
           </TableHead>
-          {Listing.map((list, idx) => (
+          {props.listing.map((list, idx) => (
             <TableBody key={idx}>
               <TableCell>
-                <Link style={{ color: "black" }} to={`/Details/${list.id}`}>
+                <Link style={{ color: "black" }} to={`/details/${list.id}`}>
                   {list["Name"]}{" "}
                 </Link>
               </TableCell>

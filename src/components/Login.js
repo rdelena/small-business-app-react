@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { TextField, Button, Container } from "@mui/material";
 import cookie from "cookie";
-import { WidthFull } from "@mui/icons-material";
 
 const Login = () => {
   const navigate = useNavigate();
