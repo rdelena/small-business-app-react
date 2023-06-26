@@ -19,7 +19,6 @@ class AddListing extends Component {
     e.preventDefault();
     const payload = { ...this.state };
     payload.id = this.props.listing.length + 1;
-    // delete payload.open;
     this.props.addListing(payload);
   };
 

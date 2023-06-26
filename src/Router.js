@@ -4,7 +4,6 @@ import cookie from "cookie";
 import Login from "./components/Login";
 import Listings from "./containers/Listings";
 import Details from "./containers/Details";
-import AdminView from "./containers/AdminView";
 import NewListing from "./containers/NewListing";
 
 const checkAuth = () => {
@@ -28,10 +27,6 @@ const Router = () => {
       <Route path="/login" element={<Login />} />
       <Route path="/listings" element={<Listings />} />
       <Route path="/details/:id" element={<Details />} />
-      <Route
-        path="/adminView"
-        element={<ProtectedRoute component={AdminView} />}
-      />
       <Route
         path="/newListing"
         element={<ProtectedRoute component={NewListing} />}

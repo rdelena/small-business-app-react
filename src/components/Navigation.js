@@ -44,14 +44,6 @@ const Navigation = () => {
                 Add
               </Link>
             </li>
-            <li className="nav-list-item">
-              <Link
-                to="/adminView"
-                style={{ textDecoration: "none", color: "white" }}
-              >
-                Edit Listings
-              </Link>
-            </li>
           </ul>
         </Toolbar>
       </AppBar>

@@ -70,6 +70,11 @@
 .text-red {
   color: red;
 }
+.username {
+  margin: 0;
+  background-color: #e5e4e2;
+  color: #808080;
+}
 
 @keyframes App-logo-spin {
   from {
