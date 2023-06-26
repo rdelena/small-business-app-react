@@ -7,5 +7,10 @@ const mapDispatchToProps = (dispatch) => {
     addListing: (listing) => dispatch(addListing(listing)),
   };
 };
+const mapStateToProps = (state) => {
+  return {
+    listing: state.listing,
+  };
+};
 
-export default connect(null, mapDispatchToProps)(AddListing);
+export default connect(mapStateToProps, mapDispatchToProps)(AddListing);

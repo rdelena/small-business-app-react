@@ -11,20 +11,20 @@ class AddListing extends Component {
 
   handleTextChange = (e) => {
     const newState = { ...this.state };
-    newState[e.target.id] = e.target.value;
+    newState[e.target.name] = e.target.value;
     this.setState(newState);
   };
 
   handleSubmit = (e) => {
     e.preventDefault();
     const payload = { ...this.state };
-    payload.id = this.props.listingTotal + 1;
-    delete payload.open;
+    payload.id = this.props.listing.length + 1;
+    // delete payload.open;
     this.props.addListing(payload);
   };
 
   componentDidUpdate = (prevProps, prevState) => {
-    if (prevProps.listingTotal !== this.props.listingTotal) {
+    if (prevProps.listing.length !== this.props.listing.length) {
       this.setState({
         name: "",
         address: "",
@@ -32,6 +32,7 @@ class AddListing extends Component {
         description: "",
       });
     }
+    console.log(this.state);
   };
 
   render() {
@@ -44,7 +45,7 @@ class AddListing extends Component {
         <TextField
           required
           onChange={this.handleTextChange}
-          defaultValue={this.state.name}
+          value={this.state.name}
           name="name"
           label="Name"
           type="text"
@@ -53,7 +54,7 @@ class AddListing extends Component {
         <TextField
           required
           onChange={this.handleTextChange}
-          defaultValue={this.state.address}
+          value={this.state.address}
           name="address"
           label="Address"
           type="text"
@@ -62,7 +63,7 @@ class AddListing extends Component {
         <TextField
           required
           onChange={this.handleTextChange}
-          defaultValue={this.state.hours}
+          value={this.state.hours}
           name="hours"
           label="Hours (ex. 8AM-9PM)"
           type="text"
@@ -71,7 +72,7 @@ class AddListing extends Component {
         <TextField
           required
           onChange={this.handleTextChange}
-          defaultValue={this.state.description}
+          value={this.state.description}
           name="description"
           label="Description"
           type="text"

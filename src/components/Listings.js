@@ -24,14 +24,16 @@ const Listings = (props) => {
           </TableHead>
           {props.listing.map((list, idx) => (
             <TableBody key={idx}>
-              <TableCell>
-                <Link style={{ color: "black" }} to={`/details/${list.id}`}>
-                  {list["Name"]}{" "}
-                </Link>
-              </TableCell>
-              <TableCell>{list["Description"]}</TableCell>
-              <TableCell>{list["Hours"]}</TableCell>
-              <TableCell>{list["Address"]}</TableCell>
+              <TableRow>
+                <TableCell>
+                  <Link style={{ color: "black" }} to={`/details/${list.id}`}>
+                    {list["name"]}{" "}
+                  </Link>
+                </TableCell>
+                <TableCell>{list["description"]}</TableCell>
+                <TableCell>{list["hours"]}</TableCell>
+                <TableCell>{list["address"]}</TableCell>
+              </TableRow>
             </TableBody>
           ))}
         </Table>

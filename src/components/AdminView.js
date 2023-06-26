@@ -26,20 +26,22 @@ const adminView = (props) => {
           </TableHead>
           {props.listing.map((list, idx) => (
             <TableBody key={idx}>
-              <TableCell>
-                <Link style={{ color: "black" }} to={`/details/${list.id}`}>
-                  {list["Name"]}{" "}
-                </Link>
-              </TableCell>
-              <TableCell>{list["Description"]}</TableCell>
-              <TableCell>{list["Hours"]}</TableCell>
-              <TableCell>{list["Address"]}</TableCell>
-              <TableCell>
-                <DeleteIcon
-                  onClick={() => props.removeListing(idx)}
-                  className="icon text-red"
-                />
-              </TableCell>
+              <TableRow>
+                <TableCell>
+                  <Link style={{ color: "black" }} to={`/details/${list.id}`}>
+                    {list["name"]}{" "}
+                  </Link>
+                </TableCell>
+                <TableCell>{list["description"]}</TableCell>
+                <TableCell>{list["hours"]}</TableCell>
+                <TableCell>{list["address"]}</TableCell>
+                <TableCell>
+                  <DeleteIcon
+                    onClick={() => props.removeListing(idx)}
+                    className="icon text-red"
+                  />
+                </TableCell>
+              </TableRow>
             </TableBody>
           ))}
         </Table>
