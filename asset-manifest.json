@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/small-business-app-react/static/css/main.1246faa5.css",
+    "main.js": "/small-business-app-react/static/js/main.2423bce4.js",
+    "static/js/787.33a89428.chunk.js": "/small-business-app-react/static/js/787.33a89428.chunk.js",
+    "static/media/Map.jpg": "/small-business-app-react/static/media/Map.620b296ddc2215f0ef92.jpg",
+    "index.html": "/small-business-app-react/index.html",
+    "main.1246faa5.css.map": "/small-business-app-react/static/css/main.1246faa5.css.map",
+    "main.2423bce4.js.map": "/small-business-app-react/static/js/main.2423bce4.js.map",
+    "787.33a89428.chunk.js.map": "/small-business-app-react/static/js/787.33a89428.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1246faa5.css",
+    "static/js/main.2423bce4.js"
+  ]
+}
